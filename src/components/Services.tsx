@@ -10,7 +10,7 @@ export default function Services() {
   const { ref: ref1, inView: inView1 } = useInView({ threshold: 0.2 });
 
   return (
-    <div className="w-full py-8 bg-[var(--bg-color-2)] px-[10%]">
+    <div className="w-full py-8 bg-[var(--bg-color-2)] px-[10%] md:px-[4%]">
       <p className="text-[30px] font-semibold text-center text-[goldenrod] mb-4">
         Services I Offer.
       </p>
