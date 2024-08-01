@@ -16,7 +16,7 @@ export default function Main() {
       >
         <div>
           <p className="text-[15px] text-[grey]">Hello</p>
-          <p className="text-[35px] text-white">I'm Blessing</p>
+          <p className="text-[35px] text-white">I&apos;m Blessing</p>
           <p className="text-[17px] text-[grey] font-light">
             Professional Copywriter & Social <br /> Media Marketer
           </p>

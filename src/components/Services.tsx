@@ -1,30 +1,26 @@
 "use client";
 import Image from "next/image";
 import copywriting from "../../public/images/copywriting.jpg";
+import proofreading from "../../public/images/proofreading.jpg";
+import voiceover from "../../public/images/voiceover.jpg";
+import productreview from "../../public/images/productreview.png";
 import { useInView } from "react-intersection-observer";
 
 export default function Services() {
-  const { ref: ref1, inView: inView1 } = useInView({ threshold: 0.1 });
-  const { ref: ref2, inView: inView2 } = useInView({
-    delay: 100,
-    threshold: 0.1,
-  });
-  const { ref: ref3, inView: inView3 } = useInView({
-    delay: 200,
-    threshold: 0.1,
-  });
-  const { ref: ref4, inView: inView4 } = useInView({
-    delay: 300,
-    threshold: 0.1,
-  });
+  const { ref: ref1, inView: inView1 } = useInView({ threshold: 0.2 });
+
   return (
-    <div className="w-full py-8 bg-[var(--bg-color-2)] px-[10%] pb-[600px]">
+    <div className="w-full py-8 bg-[var(--bg-color-2)] px-[10%]">
       <p className="text-[30px] font-semibold text-center text-[goldenrod] mb-4">
         Services I Offer.
       </p>
-      <div className={`w-full grid grid-cols-4 gap-5 `}>
+      <div
+        ref={ref1}
+        className={`w-full grid grid-cols-4 gap-5 ${
+          inView1 ? "show-el" : "hide-el"
+        }`}
+      >
         <div
-          ref={ref1}
           className={`w-full h-auto bg-[var(--bg-color-1)] rounded-lg flex flex-col overflow-hidden ${
             inView1 ? "show-el" : "hide-el"
           }`}
@@ -42,18 +38,18 @@ export default function Services() {
               persuasive content that drives results and connects with your
               audience.
             </p>
+            <button className="w-[130px] h-[30px] rounded-md text-[13px]  my-3 border-none outline-none text-[black] bg-[#ffc800] transition-colors duration-[0.3s]  ">
+              Hire Me
+            </button>
           </div>
         </div>
         <div
-          ref={ref2}
-          className={`w-full h-auto bg-[var(--bg-color-1)] rounded-lg flex flex-col overflow-hidden ${
-            inView2 ? "show-el" : "hide-el"
-          }`}
+          className={`w-full h-auto bg-[var(--bg-color-1)] rounded-lg flex flex-col overflow-hidden `}
         >
           <Image
             unoptimized
             className="w-full h-[200px] object-cover"
-            src={copywriting}
+            src={proofreading}
             alt=""
           />
           <div className="w-full min-h-[150px] p-4 text-white text-[20px] font-light">
@@ -62,19 +58,19 @@ export default function Services() {
               Ensure your content shines with expert proofreading. We catch
               errors, enhance clarity, and refine your message for a polished,
               professional finish.
-            </p>
+            </p>{" "}
+            <button className="w-[130px] h-[30px] rounded-md text-[13px]  my-3 border-none outline-none text-[black] bg-[#ffc800] transition-colors duration-[0.3s]  ">
+              Hire Me
+            </button>
           </div>
         </div>
         <div
-          ref={ref3}
-          className={`w-full h-auto bg-[var(--bg-color-1)] rounded-lg flex flex-col overflow-hidden ${
-            inView3 ? "show-el" : "hide-el"
-          }`}
+          className={`w-full h-auto bg-[var(--bg-color-1)] rounded-lg flex flex-col overflow-hidden`}
         >
           <Image
             unoptimized
             className="w-full h-[200px] object-cover"
-            src={copywriting}
+            src={voiceover}
             alt=""
           />
           <div className="w-full min-h-[150px] p-4 text-white text-[20px] font-light">
@@ -83,19 +79,19 @@ export default function Services() {
               Bring your project to life with professional voice overs. We
               deliver clear, engaging narration that captures your message and
               resonates with your audience.
-            </p>
+            </p>{" "}
+            <button className="w-[130px] h-[30px] rounded-md text-[13px]  my-3 border-none outline-none text-[black] bg-[#ffc800] transition-colors duration-[0.3s]  ">
+              Hire Me
+            </button>
           </div>
         </div>
         <div
-          ref={ref4}
-          className={`w-full h-auto bg-[var(--bg-color-1)] rounded-lg flex flex-col overflow-hidden ${
-            inView4 ? "show-el" : "hide-el"
-          }`}
+          className={`w-full h-auto bg-[var(--bg-color-1)] rounded-lg flex flex-col overflow-hidden`}
         >
           <Image
             unoptimized
             className="w-full h-[200px] object-cover"
-            src={copywriting}
+            src={productreview}
             alt=""
           />
           <div className="w-full min-h-[150px] p-4 text-white text-[20px] font-light">
@@ -104,7 +100,10 @@ export default function Services() {
               Get honest, insightful product reviews that highlight key features
               and benefits. We provide clear, unbiased assessments to guide your
               audience’s purchasing decisions.
-            </p>
+            </p>{" "}
+            <button className="w-[130px] h-[30px] rounded-md text-[13px]  my-3 border-none outline-none text-[black] bg-[#ffc800] transition-colors duration-[0.3s]  ">
+              Hire Me
+            </button>
           </div>
         </div>
       </div>

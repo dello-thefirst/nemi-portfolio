@@ -30,8 +30,9 @@ export default function About() {
           plans, managing social media campaigns, and optimizing posts for
           maximum reach and impact. I thrive on understanding audience needs and
           delivering authentic, value-driven messages that build brand loyalty
-          and drive conversions. Let's collaborate to elevate your brand's voice
-          and make a meaningful impact in the digital landscape.
+          and drive conversions. Let&apos;s collaborate to elevate your
+          brand&apos;s voice and make a meaningful impact in the digital
+          landscape.
         </p>
       </div>
     </div>
