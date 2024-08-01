@@ -16,7 +16,7 @@ export default function Services() {
       </p>
       <div
         ref={ref1}
-        className={`w-full grid grid-cols-4 gap-5 md:grid-cols-2 ${
+        className={`w-full grid grid-cols-4 gap-5 md:gap-3 md:grid-cols-2 ${
           inView1 ? "show-el" : "hide-el"
         }`}
       >
