@@ -7,7 +7,8 @@ export default function Header() {
         Nemi.
       </div>
       <nav>
-        <ul className="flex gap-6 text-[13px] text-[grey]">
+        <i className="fa-light fa-bars text-[20px] text-white"></i>
+        <ul className="flex gap-6 text-[13px] text-[grey] lg:hidden">
           <li>
             <Link href="#">Home</Link>
           </li>

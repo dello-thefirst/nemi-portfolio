@@ -7,14 +7,17 @@ export default function Main() {
   const { ref: ref1, inView: inView1 } = useInView({ triggerOnce: true });
   const { ref: ref2, inView: inView2 } = useInView({ triggerOnce: true });
   return (
-    <main className="w-full flex" style={{ height: "calc(100vh - 160px)" }}>
+    <main
+      className="w-full flex md:flex-col"
+      style={{ height: "calc(100vh - 160px)" }}
+    >
       <div
         ref={ref1}
-        className={`left w-full h-full flex items-center ${
+        className={`left w-full h-full flex items-center md:justify-center ${
           inView1 ? "show-el" : "hide-el"
         }`}
       >
-        <div>
+        <div className="md:text-center">
           <p className="text-[15px] text-[grey]">Hello</p>
           <p className="text-[35px] text-white">I&apos;m Blessing</p>
           <p className="text-[17px] text-[grey] font-light">

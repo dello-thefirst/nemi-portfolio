@@ -5,11 +5,11 @@ export default function About() {
   const { ref: ref1, inView: inView1 } = useInView();
   const { ref: ref2, inView: inView2 } = useInView();
   return (
-    <div className="w-full h-auto flex overflow-hidden">
+    <div className="w-full h-auto flex overflow-hidden md:flex-col">
       <div className="left w-full flex items-center">
         <p
           ref={ref1}
-          className={`text-[20px] font-semibold text-white ${
+          className={`text-[20px] font-semibold text-white md:text-center ${
             inView1 ? "show-el" : "hide-el"
           }`}
         >
