@@ -1,5 +1,5 @@
 "use client";
-import profile from "@/360_F_601171862_l7yZ0wujj8o2SowiKTUsfLEEx8KunYNd.jpg";
+import profile from "../../public/images/main.jpg";
 import Image from "next/image";
 import { useInView } from "react-intersection-observer";
 
@@ -37,7 +37,7 @@ export default function Main() {
         <Image
           src={profile}
           alt=""
-          className="rounded-[100px] w-[300px] h-[300px] object-cover border-4 border-[#33337d] p-[8px]"
+          className="rounded-[100px] w-[330px] h-[330px] object-cover border-[2px] border-[#ffff9e] p-[5px] object-top"
         />
       </div>
     </main>
