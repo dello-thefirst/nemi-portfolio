@@ -37,7 +37,7 @@ export default function Main() {
         <Image
           src={profile}
           alt=""
-          className="rounded-[100px] w-[330px] h-[330px] md:w-[280px] md:h-[280px] object-cover border-[2px] border-[#ffff9e] p-[5px]"
+          className="rounded-[100px] w-[330px] h-[330px] md:w-[280px] md:h-[280px] object-cover object-top border-[2px] border-[#ffff9e] p-[5px]"
         />
       </div>
     </main>

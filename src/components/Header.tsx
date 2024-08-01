@@ -15,17 +15,15 @@ export default function Header() {
           if (isSideNavVisible) setIsSideNavVisible(false);
           else setIsSideNavVisible(true);
         }}
-        className="fa-light fa-bars text-[20px] text-white opacity-0 lg:opacity-[1]"
+        className={`fa-light ${
+          isSideNavVisible ? "fa-xmark" : "fa-bars"
+        } text-[20px] text-white opacity-0 lg:opacity-[1]`}
       ></i>
       <nav
-        className={`lg:fixed lg:bg-[var(--bg-color-2)] lg:z-40 lg:w-[60vw] lg:h-screen lg:left-0 lg:bottom-0 lg:duration-[0.3s] lg:flex lg:justify-center lg:items-center ${
+        className={`lg:fixed lg:bg-[var(--bg-color-2)] lg:z-40 lg:w-[70vw] lg:h-screen lg:left-0 lg:bottom-0 lg:duration-[0.3s] lg:flex lg:justify-center lg:items-center ${
           isSideNavVisible ? "lg:translate-x-[0]" : "lg:translate-x-[-100vw]"
         }`}
       >
-        <i
-          onClick={() => setIsSideNavVisible(false)}
-          className="opacity-0 lg:opacity-[1] fa-light fa-x text-[20px] text-white absolute right-[10vw] top-[10vw]"
-        ></i>
         <ul className="flex gap-6 text-[13px] text-[grey] lg:flex-col lg:text-center">
           <li>
             <Link href="#">Home</Link>
